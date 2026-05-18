@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyScope Weather</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero-card">
+      <div>
+        <p class="eyebrow">SkyScope</p>
+        <h1>Weather with personality</h1>
+        <p class="subtitle">Search any city or use your location to reveal live conditions and a creative 5-day outlook.</p>
+      </div>
+    </section>
+
+    <section class="search-card">
+      <label for="locationInput">City, region, or ZIP code</label>
+      <div class="search-row">
+        <input id="locationInput" type="text" placeholder="Enter a location to explore" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <button id="geoBtn" class="secondary">Use my current location</button>
+    </section>
+
+    <section id="weatherCard" class="weather-card hidden">
+      <div class="weather-header">
+        <div>
+          <h2 id="locationName"></h2>
+          <p class="weather-pair">
+            <span id="weatherIcon" class="weather-icon">☀️</span>
+            <span id="weatherDescription"></span>
+          </p>
+        </div>
+        <p id="temperature" class="temp"></p>
+      </div>
+
+      <div class="weather-details">
+        <div><span>Feels like</span><strong id="apparentTemp"></strong></div>
+        <div><span>Wind</span><strong id="windSpeed"></strong></div>
+        <div><span>Humidity</span><strong id="humidity"></strong></div>
+        <div><span>Pressure</span><strong id="pressure"></strong></div>
+      </div>
+
+      <div class="forecast-row">
+        <div><span>Latitude</span><strong id="latitude"></strong></div>
+        <div><span>Longitude</span><strong id="longitude"></strong></div>
+        <div><span>Time</span><strong id="observationTime"></strong></div>
+      </div>
+
+      <section class="forecast-panel">
+        <h3>5-day forecast</h3>
+        <div id="forecastList" class="forecast-cards"></div>
+      </section>
+    </section>
+
+    <div id="statusMessage" class="status"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
